@@ -1,0 +1,30 @@
+/* css/loading.css */
+.loading-spinner {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10rem;
+    height: 10rem;
+    z-index: 9999;
+    display: none; /* 초기에는 숨김 */
+}
+
+/* dotlottie-wc 웹 컴포넌트에 대한 스타일 */
+dotlottie-wc {
+    width: 100%;
+    height: 100%;
+    /* Lottie 애니메이션이 컨테이너에 맞게 채워지도록 */
+}
+
+/* Optional: Overlay to prevent interaction while loading */
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(var(--color-background-light-rgb), 0.7);
+    z-index: 9998;
+    display: none;
+}
