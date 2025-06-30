@@ -1,0 +1,66 @@
+/* css/responsive.css */
+
+@media (max-width: 48em) { /* 768px / 16px = 48em */
+    .container {
+        flex-direction: column;
+        height: 100vh;
+        padding-bottom: 0;
+    }
+
+    .left-panel, .right-panel {
+        width: 100%;
+        transition: none;
+    }
+    
+    .left-panel {
+        border-right: none;
+        border-bottom: 0.0625rem solid rgba(var(--color-text-primary-rgb), 0.15); /* 1px */
+        overflow-y: auto;
+    }
+    
+    .right-panel {
+        overflow-y: auto;
+        position: relative; 
+    }
+
+    /* --- Resizer Styles for Mobile --- */
+    .resizer {
+        height: 0.5rem; /* 8px -> 0.5rem */
+        width: 100%;
+        cursor: ns-resize;
+        border-left: none;
+        border-top: 0.0625rem solid rgba(var(--color-text-primary-rgb), 0.15); /* 1px */
+        border-bottom: 0.0625rem solid rgba(var(--color-text-primary-rgb), 0.15); /* 1px */
+    }
+    
+    /* Specific mobile adjustment for the send icon button */
+    .send-icon-button {
+        font-size: 1.3em;
+        width: 2rem; /* 30px -> 2rem */
+        height: 2rem; /* 30px -> 2rem */
+        right: 0.25rem; /* 3px -> 0.25rem */
+        padding: 0.25rem; /* 3px -> 0.25rem */
+    }
+    
+    #chatroom-container {
+    width: calc(100vw - 2em) !important;
+    }
+    .resizer {
+        height: 1rem;
+        width: 100%;
+        cursor: ns-resize;
+        padding: 0.25rem 0;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .resizer::before {
+        content: '';
+        display: block;
+        width: 2rem; /* 40px -> 2rem */
+        height: 0.25rem; /* 4px -> 0.25rem */
+        background-color: rgba(var(--color-text-primary-rgb), 0.5);
+        border-radius: 0.125rem; /* 2px */
+    }
+}
